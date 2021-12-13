@@ -62,7 +62,6 @@ fun ComposeKeyboardScreen() {
                         }
                     }, modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = 16.dp, vertical = 8.dp)
                         .navigationBarsWithImePadding()
                 ) {
                     Text(text = "Submit")
@@ -84,7 +83,6 @@ fun ComposeKeyboardBody(contentPadding: PaddingValues) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .nestedScroll(connection = rememberImeNestedScrollConnection())
                 .verticalScroll(state = rememberScrollState()),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
